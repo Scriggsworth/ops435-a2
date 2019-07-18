@@ -1,0 +1,10 @@
+Algorithm design 
+INPUT
+1.	Use the last –F command to see the information about all users logged in and append it into the text document daily_usage_report
+2.	Read all the records within the daily_usage_report file line by line, stores the results into a string, and removes all unwanted records
+PROCESSING
+1.	Based on the options specified within the command, compute the input into the script to retrieve the requested information
+2.	Store the requested information in either a text output or a specific file that can be used for using later
+OUTPUT
+1.	Display the requested output, write the requested output to a unique file
+2.	Print the contents of the output or unique file, to be read easily for users.
