@@ -1,1 +1,4 @@
 Please refer to your algorithm file for comments.
+
+30/07/2019 
+The following lines in your python script should be moved to the line after "if __name__ == '__main__' ".
