@@ -25,14 +25,7 @@ import argparse
 import time
 
 #arg.parse info and options
-parser = argparse.ArgumentParser(description="Usage Report based on the last command",epilog="Copyright 2019 - Igor Kossinov")
-parser.add_argument("-l", "--list", type=str, choices=['user','host'], help="generate user name or remote host IP from the given files")
-parser.add_argument("-r", "--rhost", help="usage report for the given remote host IP")
-parser.add_argument("-t","--type", type=str, choices=['daily','weekly','monthly'], help="type of report: daily, weekly, and monthly")
-parser.add_argument("-u", "--user", help="usage report for the given user name")
-parser.add_argument("-v","--verbose", action="store_true",help="turn on output verbosity")
-parser.add_argument("F", nargs = "+", help="list of files to be processed")
-args=parser.parse_args()
+
 
 def list(option, filename):
 		'''
@@ -261,6 +254,14 @@ def verbose():
 	print("Type of args for files", type(args.F))
 
 if __name__ == '__main__':
+	parser = argparse.ArgumentParser(description="Usage Report based on the last command",epilog="Copyright 2019 - Igor Kossinov")
+	parser.add_argument("-l", "--list", type=str, choices=['user','host'], help="generate user name or remote host IP from the given files")
+	parser.add_argument("-r", "--rhost", help="usage report for the given remote host IP")
+	parser.add_argument("-t","--type", type=str, choices=['daily','weekly','monthly'], help="type of report: daily, weekly, and monthly")
+	parser.add_argument("-u", "--user", help="usage report for the given user name")
+	parser.add_argument("-v","--verbose", action="store_true",help="turn on output verbosity")
+	parser.add_argument("F", nargs = "+", help="list of files to be processed")
+	args=parser.parse_args()
 	select = sys.argv[2]
 	filename = args.F[0]
 	loginuser = sys.argv[1]
