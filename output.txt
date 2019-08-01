@@ -11,6 +11,7 @@ asmith   pts/2        10.43.115.162    Tue Feb 13 16:19:29 2018 - Tue Feb 13 16:
 tsliu2   pts/4        10.40.105.130    Tue Feb 13 16:17:21 2018 - Tue Feb 13 16:30:10 2018  (00:12)    
 cwsmith  pts/13       10.40.91.247     Tue Mar 13 18:08:52 2018 - Tue Mar 13 18:46:52 2018  (00:38)    
 asmith pts/11 10.40.105.130 Tue Feb 13 14:07:43 2018 - Tue Feb 13 16:07:43 2018 (02:00)
+
 + ./a2_ikossinov.py -h
 usage: a2_ikossinov.py [-h] [-l {user,host}] [-r RHOST]
                        [-t {daily,weekly,monthly}] [-u USER] [-v]
@@ -34,6 +35,7 @@ optional arguments:
   -v, --verbose         turn on output verbosity
 
 Copyright 2019 - Igor Kossinov
+
 + ./a2_ikossinov.py -l user usage_data_file.txt
 Generating list for user
 List of users for: usage_data_file.txt
@@ -41,6 +43,7 @@ rchan
 cwsmith
 asmith
 tsliu2
+
 + ./a2_ikossinov.py -l host usage_data_file.txt
 Generating list for host
 List of hosts for: usage_data_file.txt
