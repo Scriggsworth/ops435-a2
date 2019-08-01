@@ -29,7 +29,7 @@ import time
 
 def list(option, filename):
 		'''
-		Description
+		Reads specified file, line by line, if it is an ip or a user, return the list
 		'''
 		if option =="user":
 			k = open(filename, "r")
@@ -77,7 +77,8 @@ def list(option, filename):
 
 def userlisting(name, filename, loginuser):
 	'''
-	This function
+	This functions takes the input from the list function, divides and takes only the time
+	from each row, in the format of Mon:Day:Time:Year, then returns the list of rows.
 	'''
 
 	tlist = []
@@ -103,7 +104,10 @@ def userlisting(name, filename, loginuser):
 
 def daily(listofusers):
 	'''
-	This function
+	This function takes the parameter listofusers which is the list from userlist
+	It first reads the date, and then deletes the date, puts it into a list, then
+	joins the list to form a string. Then, it seperates each row into the login and logout time, converts the time into seconds, 
+	then back into a date in the format of Y:M:D
 	'''
 	datetime= 0
 	totaltime = 0
@@ -152,7 +156,7 @@ def daily(listofusers):
 
 def weekly(listofusers):
 	'''
-	function
+	Just like daily function, suited to focus on week of the year instead of y:m:d
 	'''
 
 	datetime= 0
@@ -200,7 +204,7 @@ def weekly(listofusers):
 
 def monthly(listofusers):
 	'''
-	function
+	Just like daily, and weekly function, suited to focus on month of the year instead of the day, or week
 	'''
 
 	datetime= 0
@@ -248,7 +252,7 @@ def monthly(listofusers):
 
 def verbose():
 	'''
-	This function 
+	Prints parts of the verbose
 	'''
 	print("Files to be processed", args.F)
 	print("Type of args for files", type(args.F))
