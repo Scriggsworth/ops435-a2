@@ -1,0 +1,160 @@
+Test data file: usage_data_file.txt
+rchan    pts/9        10.40.91.236     Tue Feb 13 16:53:42 2018 - Tue Feb 13 16:57:02 2018  (00:03)    
+cwsmith  pts/10       10.40.105.130    Wed Feb 14 23:09:12 2018 - Thu Feb 15 02:11:23 2018  (03:02)
+rchan    pts/2        10.40.91.236     Tue Feb 13 16:22:00 2018 - Tue Feb 13 16:45:00 2018  (00:23)    
+rchan    pts/5        10.40.91.236     Tue Feb 15 16:22:00 2018 - Tue Feb 15 16:55:00 2018  (00:33)    
+asmith   pts/2        10.43.115.162    Tue Feb 13 16:19:29 2018 - Tue Feb 13 16:22:00 2018  (00:02)    
+tsliu2   pts/4        10.40.105.130    Tue Feb 13 16:17:21 2018 - Tue Feb 13 16:30:10 2018  (00:12)    
+cwsmith  pts/13       10.40.91.247     Tue Mar 13 18:08:52 2018 - Tue Mar 13 18:46:52 2018  (00:38)    
+asmith pts/11 10.40.105.130 Tue Feb 13 14:07:43 2018 - Tue Feb 13 16:07:43 2018 (02:00)
+usage: a2_ikossinov.py [-h] [-l {user,host}] [-r RHOST]
+                       [-t {daily,weekly,monthly}] [-u USER] [-v]
+                       F [F ...]
+
+Usage Report based on the last command
+
+positional arguments:
+  F                     list of files to be processed
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l {user,host}, --list {user,host}
+                        generate user name or remote host IP from the given
+                        files
+  -r RHOST, --rhost RHOST
+                        usage report for the given remote host IP
+  -t {daily,weekly,monthly}, --type {daily,weekly,monthly}
+                        type of report: daily, weekly, and monthly
+  -u USER, --user USER  usage report for the given user name
+  -v, --verbose         turn on output verbosity
+
+Copyright 2019 - Igor Kossinov
+Generating list for user
+List of users for: usage_data_file.txt
+rchan
+cwsmith
+asmith
+tsliu2
+Generating list for host
+List of hosts for: usage_data_file.txt
+10.40.91.236
+10.40.105.130
+10.43.115.162
+10.40.91.247
+Daily Usage Report for rchan
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 13 	 1580
+2018 02 15 	 1980
+Total		 3560
+Weekly Usage Report for rchan
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 07 	 3560
+Total		 3560
+Monthly Usage Report for rchan
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 	 3560
+Total		 3560
+Daily Usage Report for 10.40.105.99
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+Total		 0
+Weekly Usage Report for 10.40.105.99
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+Total		 0
+Monthly Usage Report for 10.40.105.99
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+Total		 0
+Generating list for user
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Generating list for user
+List of users for: usage_data_file.txt
+rchan
+cwsmith
+asmith
+tsliu2
+Generating list for host
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Generating list for host
+List of hosts for: usage_data_file.txt
+10.40.91.236
+10.40.105.130
+10.43.115.162
+10.40.91.247
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for user: asmith
+usage report for type: daily
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Daily Usage Report for asmith
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 13 	 7351
+Total		 7351
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for user: asmith
+usage report for type: weekly
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Weekly Usage Report for asmith
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 07 	 7351
+Total		 7351
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for user: asmith
+usage report for type: monthly
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Monthly Usage Report for asmith
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 	 7351
+Total		 7351
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for remote host: 10.40.105.130
+usage report for type: daily
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Daily Usage Report for 10.40.105.130
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 14 	 10931
+2018 02 13 	 7969
+Total		 18900
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for remote host: 10.40.105.130
+usage report for type: weekly
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Weekly Usage Report for 10.40.105.130
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 07 	 18900
+Total		 18900
+Files to be processed ['usage_data_file.txt']
+Type of args for files <class 'list'>
+usage report for remote host: 10.40.105.130
+usage report for type: monthly
+processing usage report for the following:
+reading login/logout record files ['usage_data_file.txt']
+Monthly Usage Report for 10.40.105.130
+<><><><><><><><><><><><><><>
+Date		Usage in Seconds
+2018 02 	 18900
+Total		 18900
